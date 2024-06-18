@@ -1,8 +1,10 @@
+// eslint-disable-next-line no-unused-vars
 import React from 'react';
 
 const INPUT_CLASS = "block w-full bg-zinc-100 p-2 rounded border border-zinc-300";
 const BUTTON_CLASS = "w-full bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded";
 
+// eslint-disable-next-line react/prop-types
 const TrainerOption = ({ name, fullName, specialty }) => (
     <option>{`${name} | ${fullName} | ${specialty}`}</option>
 );
