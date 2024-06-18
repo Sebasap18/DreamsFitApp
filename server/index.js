@@ -21,7 +21,7 @@ app.listen(port, () => {
 // Ruta para ejecutar una consulta específica
 app.get('/unity', async (req, res) => {
     try {
-        const result = await pool.query('SELECT * from unity');  // Asume que tienes una tabla 'users'
+        const result = await pool.query('SELECT * FROM core.unity');  // Asume que tienes una tabla 'users'
         res.json(result.rows);
         console.log(res);
     } catch (err) {
