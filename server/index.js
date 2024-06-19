@@ -1,5 +1,5 @@
 const express = require('express');
-const pool = require('./config/dbConfig/db');
+const pool = require('./config/dbConfig/db.js');
 
 const app = express();
 const port = 3000;
@@ -23,7 +23,6 @@ app.get('/unity', async (req, res) => {
     try {
         const result = await pool.query('SELECT * FROM core.unity');  // Asume que tienes una tabla 'users'
         res.json(result.rows);
-        console.log(res);
     } catch (err) {
         console.error(err);
         res.status(500).send('Error al ejecutar la consulta');

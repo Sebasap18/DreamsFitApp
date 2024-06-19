@@ -3,7 +3,7 @@ const dotenv = require('dotenv');
 
 // Cargar variables de entorno desde el archivo .env
 dotenv.config();
-
+console.log('DB_USER:', process.env.DB_USER);
 // Crear un pool de conexiones
 const pool = new Pool({
     host: process.env.DB_HOST,
