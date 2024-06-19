@@ -8,16 +8,16 @@ const Access = require('../../models/core/accessModel');
  * @returns {Promise<void>}
  */
 async function findAccess(req, res) {
-    const email = req.query;
-    const secret = req.query;
-    const criteria = {};
-    if (email) criteria.email = email;
-    if (secret) criteria.secret = secret;
+    // const email = req.query;
+    // const secret = req.query;
+    // const criteria = {};
+    // if (email) criteria.email = email;
+    // if (secret) criteria.secret = secret;
     try {
         // Realizar la consulta con las condiciones
-        const access = await Access.findAll({
-            where: criteria,
-        });
+        const access = await Access.findAll(
+            //    where: criteria,
+        );
 
         res.json(access);
     } catch (error) {
