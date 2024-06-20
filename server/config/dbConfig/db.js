@@ -19,12 +19,11 @@ const sequelize = new Sequelize({
 async function testConnection() {
     try {
         await sequelize.authenticate();
-        console.log('Conexión establecida correctamente con la base de datos.');
+        console.log('Connection successfully established with the database');
     } catch (error) {
-        console.error('No se pudo conectar a la base de datos:', error);
+        console.error('Could not connect to database:', error);
     }
 }
-
 testConnection();
 
 module.exports = sequelize;
